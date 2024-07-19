@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+<div class="parent">
+
+    sanaiyl tariq <br>
+
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+</div>
+<ul class="maa" id="id">
+    <li class="bcha" >list1</li>
+    <li class="bcha">list2</li>
+    <li class="bcha">lst3</li>
+    <li class="bcha">list4</li>
+</ul>
+
+
+
+
+
+<script src="sunny.js"></script>
+
+<script>
+    let parent = document.querySelector('.parent')
+// console.log(parent);
+// console.log(parent.children);
+// console.log(parent.children[0]);
+// console.log(parent.children[1]);
+// console.log(parent.children[2]);
+// console.log(parent.children[2].innerHTML = "sanaiyla and wednesday");
+
+
+for (let i = 0; i < parent.children.length; i++) {
+// console.log(parent.children[i].innerHTML);
+}
+parent.children[2].style.color = 'red'
+parent.children[2].style.backgroundColor = 'aliceblue'
+parent.children[2].style.padding = '20px'
+parent.children[2].style.margin = '20px'
+parent.children[2].style.fontSize = '20px'
+parent.children[2].style.textAlign = 'center'
+// jo hc zvar k andr store hay usi ka nam ly kr ap parent ya sibling element findout krskty ho otherwise classname sy nh hoga
+// console.log(parent.firstElementChild);
+// console.log(parent.lastElementChild);
+let day1 = document.querySelector('.day')
+console.log(day1);
+let maa = document.querySelector('.maa')
+console.log(maa);
+console.log(maa.children[0]);
+maa.children[0].style.color = 'black'
+maa.children[0].style.backgroundColor = 'green'
+maa.children[0].style.padding = '20px'
+maa.children[0].style.fontSize = '20px'
+let bcha = document.querySelector('.bcha')
+console.log(bcha);
+bcha.style.backgroundColor = 'yellow'
+let id = document.querySelector('#id')
+id.children[2].style.padding = '20px'
+console.log(  id.children[2].style.backgroundColor = 'brown');
+console.log(id.children[2].innerHTML = "sanaiyla");
+id.children[2].setAttribute('class','sunny')
+console.log(  id.children[2].getAttribute('class'));
+console.log(bcha.parentElement);
+console.log(bcha.nextElementSibling);
+// .style lga k css lagao
+console.log(bcha.nextElementSibling.style.fontSize = '50px');
+//  sibling sy usk siblings access karo
+//  this way ap child li classs likh lar usk pareent ko locate karskty ho
+
+console.log(parent.firstElementChild);
+console.log(parent.lastElementChild);
+//  jo k thursday wla segment hay
+// jo k break hay
+
+// very important
+
+
+console.log("NODES: ", parent.childNodes);
+console.log("NODES: ", maa.childNodes);
+console.log("NODES: ", bcha.childNodes);
+//  9 hen hlank usk andr 4 divs hen and single break and space counts
+// console.log(id);
+//  ctreating elements
+
+
+
+
+
+let h6 = document.createElement('h6')
+console.log(h6);
+h6.setAttribute('id',Math.round(5.5))
+h6.setAttribute('class','class')
+h6.setAttribute('title','sanaiyla tariq')
+h6.style.color = 'white'
+h6.style.backgroundColor = 'green'
+h6.style.fontSize = '25px'
+h6.style.padding = '20px'
+// h6.innerHTML = "dani ek khota hay"
+let text = document.createTextNode('dani ek khota hay')
+h6.append(text)
+//  u can use innerhtml wla option but use this as its opitmized
+// dot append seeekha textnode seekha
+document.body.appendChild(h6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let span = document.createElement('span')
+console.log(span);
+span.style.padding = '20px'
+span.style.backgroundColor = 'green'
+span.style.color = 'white'
+
+span.title = "sunny"
+let texts = document.createTextNode('bundo ek khota hay')
+console.log(texts);
+span.append(texts)
+document.body.appendChild(span)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
